@@ -1,0 +1,63 @@
+POST  http://localhost:3000/users/
+Content-Type: application/json
+
+{
+    "username" : "ramn021995",
+    "name" :     "Raman",
+     "password" : "Raman2205",
+     "gender" : "male",
+     "location" : "Hanamkonda"
+}
+###
+GET http://localhost:3000/states/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5pa2hpbDAyMTk5NSIsImlhdCI6MTY2MjI4ODQ0OH0.cwL3QU-7fDFSH--0o7LoF7vUP8bIDoy6Sk_vW5ZwBcc
+### 
+GET http://localhost:3000/states/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5pa2hpbDAyMTk5NSIsImlhdCI6MTY2MjI4ODQ0OH0.cwL3QU-7fDFSH--0o7LoF7vUP8bIDoy6Sk_vW5ZwBcc
+###
+POST http://localhost:3000/districts/
+Content-Type : application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5pa2hpbDAyMTk5NSIsImlhdCI6MTY2MjI4ODQ0OH0.cwL3QU-7fDFSH--0o7LoF7vUP8bIDoy6Sk_vW5ZwBcc
+
+{
+    "districtName" : "Warangal",
+    "stateId" : 5,
+    "cases" : 2020,
+    "cured" : 1900,
+    "active" : 120,
+    "deaths" : 15
+}
+###
+GET http://localhost:3000/districts/322
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5pa2hpbDAyMTk5NSIsImlhdCI6MTY2MjI4ODQ0OH0.cwL3QU-7fDFSH--0o7LoF7vUP8bIDoy6Sk_vW5ZwBcc
+###
+DELETE http://localhost:3000/districts/323 
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5pa2hpbDAyMTk5NSIsImlhdCI6MTY2MjI4ODQ0OH0.cwL3QU-7fDFSH--0o7LoF7vUP8bIDoy6Sk_vW5ZwBcc 
+###
+PUT http://localhost:3000/districts/766
+Content-Type: application/json 
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5pa2hpbDAyMTk5NSIsImlhdCI6MTY2MjI4ODQ0OH0.cwL3QU-7fDFSH--0o7LoF7vUP8bIDoy6Sk_vW5ZwBcc 
+
+{
+  "districtName": "Nadia",
+  "stateId": 3,
+  "cases": 9628,
+  "cured": 6524,
+  "active": 3000,
+  "deaths": 104
+}
+
+###
+GET http://localhost:3000/states/2/stats/ 
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5pa2hpbDAyMTk5NSIsImlhdCI6MTY2MjI4ODQ0OH0.cwL3QU-7fDFSH--0o7LoF7vUP8bIDoy6Sk_vW5ZwBcc 
+
+###
+POST http://localhost:3000/login/
+Content-Type: application/json
+
+{
+    "username" : "nikhil021995",
+    "password" : "nikhil0205"
+}
+
+//{"jwtToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5pa2hpbDAyMTk5NSIsImlhdCI6MTY2NTE1Mzg0OH0.kS_jtzq24YiQcbJ45XLeX4ovDtuVae49U3ty4HcdYhg"}
